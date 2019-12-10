@@ -59,7 +59,7 @@ switch ($action) {
         // get car details from db
         $carData = getCarById($cars_id)
         // calculate what next service is needed based on mileage
-        if 
+         
         // pass what info to html page and display to user
     break;
     default: 
