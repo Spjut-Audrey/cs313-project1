@@ -36,11 +36,11 @@
 
         <!-- show current cars if added don't show if nothing there(check added with php) -->
         <?php
-            if ( car array is < 0) {
-                echo '<div class="showCar"></div>';
-            } else {
-                echo '';
-            }
+            // if ( car array is < 0) {
+            //     echo '<div class="showCar"></div>';
+            // } else {
+            //     echo '';
+            // }
         ?>
     </body>
 </html>
