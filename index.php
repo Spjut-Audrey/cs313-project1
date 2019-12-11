@@ -1,7 +1,14 @@
 <?php
 // connect to database 
-require('dbconnect.php');
-require('car-model.php');
+require_once('dbconnect.php');
+require_once('car-model.php');
+
+session_start();
+
+$action = filter_input(INPUT_POST, 'action');
+    if ($action == NULL) {
+        $action = filter_input(INPUT_GET, 'action');
+    }
 
 switch($action) {
     case 'addCar':
