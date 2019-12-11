@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+    if (isset($_SESSION['message'])) {
+        $message = $_SESSION['message'];
+       }
+?><!DOCTYPE html>
 <html lang="en-us">
     <head>
         <meta charset="utf=8">
@@ -30,17 +34,18 @@
             <input type="number" name="carMiles" id="carMiles"><br>
 
             <input type="submit" value="Submit">
-            <input type="hidden" name="action" value="checkCar">
+            <input type="hidden" name="action" value="addCar">
 
         </form>
 
-        <!-- show current cars if added don't show if nothing there(check added with php) -->
+        <!-- show current cars if added don't show if nothing there(check added with php)
+        message shows instead-->
         <?php
-            // if ( $cararray is < 0) {
-            //     echo '<div class="showCar"></div>';
-            // } else {
-            //     echo '';
-            // }
+            if (isset($message)) {
+                echo $message;
+            } if (isset($carsList)) {
+                echo $carsList;
+             }
         ?>
     </body>
 </html>
