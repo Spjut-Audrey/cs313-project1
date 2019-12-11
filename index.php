@@ -19,8 +19,8 @@ switch($action) {
 
         // Run basic checks, return if errors
         if (empty($cars_make) || empty($cars_miles)) {
-            $message = '<p class="notice">Please provide enter a make and miles.</p>';
-            include './project1.php';
+            $message = '<p class="notice">Please enter a make and miles of your car.</p>';
+            header('location: index.php');
             exit;
             }
         
