@@ -103,6 +103,6 @@ switch($action) {
             $message = '<p class="notify">Sorry, no cars were returned.</p>';
         }
 
-        include 'project1.php';
+        header('location: project1.php');
     }
 ?>
