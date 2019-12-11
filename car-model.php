@@ -1,32 +1,29 @@
 <?php
 // make a function that adds car to a database
 function regCar($cars_make, $cars_miles) {
+    $db = getDB();
+    $sql = 'INSERT INTO cars (cars_make, cars_miles) VALUES (:cars_make, :cars_miles)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':cars_make', $cars_make, PDO::PARAM_STR);
+    $stmt->bindValue(':cars_miles', $cars_miles, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
 
-// connect to db
-$db = dbConnect();
-
-// sql statement
-$sql = 'INSERT INTO cars (cars_make, cars_miles) VALUES (:cars_make, :cars_miles)';
-
-// prepare sql
-$stmt = $db->prepare($sql);
-
-// replace placeholders in SQL w/ actual values in vars & tells db what type of data it is
-$stmt->bindValue(':cars_make', $cars_make, PDO::PARAM_STR);
-$stmt->bindValue(':cars_miles', $cars_miles, PDO::PARAM_INT);
-
-// insert data
-$stmt->execute();
-
-// ask rows changed
-$rowsChanged = $stmt->rowCount();
-
-// close db interaction
-$stmt->closeCursor();
-
-// return succesful rows changed
-return $rowsChanged;
-}
+    return $rowsChanged;
+    }
 
 // make request to db to for car info
+// delete car based on id
+function deleteProduct($invId) {
+    $db = getDB();
+    $sql = 'DELETE FROM cars WHERE cars_id = :cars_id';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':cars_id', $cars_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    
+    return $rowsChanged;
+   }
 ?>

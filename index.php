@@ -1,5 +1,7 @@
 <?php
 // connect to database 
+require('dbconnect.php');
+require('car-model.php');
 
 switch($action) {
     case 'addCar':
@@ -35,6 +37,7 @@ switch($action) {
         $cars_id = filter_input(INPUT_POST, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
     
         $deleteResult = deleteProduct($cars_id);
+        
         if ($deleteResult) {
             $message = "<p class='notice'>Congratulations, $invName was successfully deleted.</p>";
             $_SESSION['message'] = $message;
