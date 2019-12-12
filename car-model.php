@@ -14,17 +14,15 @@ function regCar($cars_make, $cars_miles) {
     }
 
 // make request to db to for car info
-function getCarInfo($cars_miles) {
+function getCarInfo() {
     $db = getDB();
-        $sql = 'SELECT cars_make, cars_id FROM cars WHERE $cars_miles = :cars_miles';
-        $stmt = $db->prepare($sql);
-        $stmt ->bindValue(':cars_miles', $cars_miles = PDO::PARAM_INT);
-        $stmt->execute();
-        $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        // $stmt->closeCursor();
+    $sql = 'SELECT cars_make, cars_model, cars_id FROM cars ORDER BY invName ASC';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
 
-        return $cars;
-}
+    return $cars;
 // delete car based on id
 function deleteProduct($cars_id) {
     $db = getDB();

@@ -49,7 +49,7 @@ switch($action) {
         //make sure outcome worked
         if($carOutcome == 1) {
             $message = "Thanks for adding your car!";
-            header("Location: index.php?action=buildTable&carsMiles=$cars_miles");
+            header("Location: index.php?action=buildTable");
             exit;
         } else {
             $message = "<p>Sorry adding car failed. Please try again</p>";
@@ -78,10 +78,9 @@ switch($action) {
     case 'buildTable':  
         print($action);
         // // get car info for displaying to user   
-        $cars_miles = $_GET['cars_miles'];
         print(" after filter_input");
 
-        $cars = getCarInfo($cars_miles);
+        $cars = getCarInfo();
         print("end");
 
         echo "hey";
@@ -92,17 +91,17 @@ switch($action) {
         // link: https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
         if ($cars[cars_miles] <= 3000) {
             $mileRecommend = 'Change Oil';
-        } else if ($cars <= 30000) {
+        } else if ($cars[cars_miles] <= 30000) {
             $mileRecommend = 'Get Tune Up Service';
-        } else if ($cars <= 50000) {
+        } else if ($cars[cars_miles] <= 50000) {
             $mileRecommend = 'Check Shocks & Struts';
-        } else if ($cars <= 60000) {
+        } else if ($cars[cars_miles] <= 60000) {
             $mileRecommend = 'Replace Timing Belts';
-        } else if ($cars <= 70000) {
+        } else if ($cars[cars_miles] <= 70000) {
             $mileRecommend = 'Check Pumps';
-        } else if ($cars <= 80000) {
+        } else if ($cars[cars_miles] <= 80000) {
             $mileRecommend = 'Replace Battery';
-        } else if ($cars <= 90000) {
+        } else if ($cars[cars_miles] <= 90000) {
             $mileRecommend = 'Get Tune Up Service';
         } else {
             $mileRecommend = 'Get Transmission & Engine Evaluation';
