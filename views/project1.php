@@ -30,7 +30,7 @@
                 <input type="radio" name="carMake" value="Toyota">Toyota<br>
                 <input type="radio" name="carMake" value="Ford">Ford<br>
                 <input type="radio" name="carMake" value="Honda">Honda<br>
-                <input type="radio" name="carMake" value="Hyundai">Hyundai<br>
+                <input type="radio" name="carMake" value="Hyundai">Hyundai<br><br>
 
                 <!-- car type/model -->
                 <!-- might be too difficult without an extensive database -->
