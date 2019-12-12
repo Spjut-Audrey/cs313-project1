@@ -49,7 +49,7 @@ switch($action) {
         //make sure outcome worked
         if($carOutcome == 1) {
             $message = "Thanks for adding your car!";
-            header("Location: index.php?action=buildTable&cars_miles=$cars_miles");
+            header("Location: index.php?action=buildTable&carsMiles=$cars_miles");
             exit;
         } else {
             $message = "<p>Sorry adding car failed. Please try again</p>";
@@ -78,7 +78,7 @@ switch($action) {
     case 'buildTable':  
         print($action);
         // // get car info for displaying to user   
-        $cars_miles = filter_input(INPUT_GET, 'cars_miles', FILTER_SANITIZE_NUMBER_INT);
+        $cars_miles = filter_input(INPUT_GET, 'carMiles', FILTER_SANITIZE_NUMBER_INT);
         print(" after filter_input");
 
         $cars = getCarInfo($cars_miles);
