@@ -19,10 +19,10 @@ table {
     width: 50%;
     border-collapse: collapse;
     padding: 10px;
+    text-align: center;
 }
 
 th {
-    text-align: center;
     background-color: #303030;
     color: white;
 }
@@ -33,5 +33,7 @@ tr:hover {
 
 th, td {
     border-bottom: 1px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
