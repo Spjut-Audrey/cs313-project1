@@ -33,7 +33,7 @@
             <!-- car miles -->
             <input type="number" name="carMiles" id="carMiles"><br>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="button">
             <input type="hidden" name="action" value="addCar">
 
         </form>
