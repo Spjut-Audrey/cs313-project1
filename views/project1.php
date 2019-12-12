@@ -12,13 +12,16 @@
 
         <!-- css -->
         <link rel="stylesheet" href="../main.css">
+
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <!-- js -->
         <script src="../project1.js"></script>
     </head>
     <body>
         <div id="form">
             <h1>Car Maintenence Tracker</h1>
-            
+
             <button onclick="showForm()">Add Car</button>
             <!-- hide until "add car" button is pressed -->
             <form method="post" action="../index.php" class="hidden" id="addCarForm">
