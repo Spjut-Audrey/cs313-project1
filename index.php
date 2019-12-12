@@ -67,7 +67,7 @@ switch($action) {
         $deleteResult = deleteCar($cars_id);
         
         if ($deleteResult) {
-            $message = "<p class='notice'>Congratulations car was successfully deleted.</p>";
+            $message = "<p class='notice'>Congratulations! Car was successfully deleted.</p>";
             $_SESSION['message'] = $message;
             header('location: index.php?action=buildTable');
             exit;
