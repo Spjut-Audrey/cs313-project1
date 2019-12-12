@@ -20,6 +20,8 @@ switch($action) {
         print($cars_make);
         print($cars_miles);
 
+        exit;
+
         // Run basic checks, return if errors
         if (empty($cars_make) || empty($cars_miles)) {
             $message = '<p class="notice">Please enter a make and miles of your car.</p>';
