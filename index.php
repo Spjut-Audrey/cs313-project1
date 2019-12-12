@@ -58,9 +58,13 @@ switch($action) {
         }
     break;
     case 'del':
-        $cars_make = filter_input(INPUT_POST, 'cars_make', FILTER_SANITIZE_STRING);
+
+        $cars_make = $_POST['carMake'];
         $cars_id = filter_input(INPUT_POST, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
-    
+        
+        echo $cars_make;
+        echo $cars_id;
+
         $deleteResult = deleteCar($cars_id);
         
         if ($deleteResult) {
