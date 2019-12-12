@@ -79,7 +79,7 @@ switch($action) {
         print($action);
         // // get car info for displaying to user   
         $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
-        print($action);
+        print(" after filter_input");
 
         $cars = getCarInfo($cars_id);
         print("end");
