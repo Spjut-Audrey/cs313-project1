@@ -61,17 +61,17 @@ switch($action) {
         $cars_make = filter_input(INPUT_POST, 'cars_make', FILTER_SANITIZE_STRING);
         $cars_id = filter_input(INPUT_POST, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
     
-        $deleteResult = deleteProduct($cars_id);
+        $deleteResult = deleteCar($cars_id);
         
         if ($deleteResult) {
-            $message = "<p class='notice'>Congratulations, $invName was successfully deleted.</p>";
+            $message = "<p class='notice'>Congratulations car was successfully deleted.</p>";
             $_SESSION['message'] = $message;
-            header('location: /acme/products/');
+            header('location: index.php?action=buildTable');
             exit;
         } else {
-            $message = "<p class='notice'>Error: $invName was not deleted.</p>";
-            $_SESSION['message'] = $message;
-            header('location: /acme/products/');
+            $message = "<p class='notice'>Error: car was not deleted.</p>";
+            $_SESSION['message'] = $message; 
+            header('location: index.php?action=buildTable');
             exit;
         }
     break; 
@@ -94,7 +94,7 @@ switch($action) {
         if(count($cars) > 0) {
             $carsList = '<table class="carsTable">';
             $carsList .= '<thead>';
-            $carsList .= '<tr><th>Car Make</th><th>Car Miles</th><th>Recommended Maintenence</th></tr>';
+            $carsList .= '<tr><th>Car Make</th><th>Car Miles</th><th colspan="2">Recommended Maintenence</th></tr>';
             $carsList .= '</thead>';
             $carsList .= '<tbody>';
 

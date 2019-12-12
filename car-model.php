@@ -26,7 +26,7 @@ function getCarInfo() {
 }
 
 // delete car based on id
-function deleteProduct($cars_id) {
+function deleteCar($cars_id) {
     $db = getDB();
     $sql = 'DELETE FROM cars WHERE cars_id = :cars_id';
     $stmt = $db->prepare($sql);
