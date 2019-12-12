@@ -64,8 +64,6 @@ switch($action) {
         
         echo $action;
 
-        exit;
-
         $deleteResult = deleteCar($cars_id);
         
         if ($deleteResult) {
