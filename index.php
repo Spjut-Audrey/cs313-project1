@@ -17,6 +17,8 @@ switch($action) {
         $cars_make = filter_input(INPUT_POST, 'carMake', FILTER_SANITIZE_STR);
         $cars_miles = filter_input(INPUT_POST, 'carMiles', FILTER_VALIDATE_INT);
 
+        echo $action;
+        echo $cars_make;
         print($cars_make);
         print($cars_miles);
 
