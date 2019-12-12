@@ -14,8 +14,18 @@ function regCar($cars_make, $cars_miles) {
     }
 
 // make request to db to for car info
+function getCarInfo($cars_id) {
+    $db = getDB();
+        $sql = 'SELECT cars_make, cars_miles FROM cars WHERE $cars_id = :cars_id';
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+
+        return $cars;
+}
 // delete car based on id
-function deleteProduct($invId) {
+function deleteProduct($cars_id) {
     $db = getDB();
     $sql = 'DELETE FROM cars WHERE cars_id = :cars_id';
     $stmt = $db->prepare($sql);
@@ -26,4 +36,6 @@ function deleteProduct($invId) {
     
     return $rowsChanged;
    }
+
+
 ?>

@@ -77,7 +77,8 @@ switch($action) {
     break; 
     case 'buildTable':  
         // get car info for displaying to user   
-        $cars = getCarInfo();
+        $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_STRING);
+        $cars = getCarInfo($cars_id);
 
         // check mileage against mileage table in switch probably not as db table
         // decided to use if statement because this stackoverflow said it was faster loading
@@ -122,5 +123,6 @@ switch($action) {
         }
 
         header('location: views/project1.php');
+        break;
     }
 ?>
