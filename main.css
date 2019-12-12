@@ -16,6 +16,9 @@ form {
 
 table {
     margin: 0 auto;
+    width: 50%;
+    border-collapse: collapse;
+    padding: 10px;
 }
 
 th {
