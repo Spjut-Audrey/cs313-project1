@@ -16,7 +16,7 @@ function regCar($cars_make, $cars_miles) {
 // make request to db to for car info
 function getCarInfo() {
     $db = getDB();
-    $sql = 'SELECT cars_make, cars_model, cars_id FROM cars ORDER BY cars_id ASC';
+    $sql = 'SELECT cars_make cars_model cars_id FROM cars ORDER BY cars_id ASC';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
