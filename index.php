@@ -81,7 +81,7 @@ switch($action) {
         $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_STRING);
         print($action);
         $cars = getCarInfo($cars_id);
-        print($edn);
+        print("end");
 
         echo "hey";
         exit;
