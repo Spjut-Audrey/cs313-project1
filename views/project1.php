@@ -45,9 +45,7 @@
                 echo $message;
             }; 
             
-            if (isset($carsList)) {
-                echo $carsList;
-             }
+            echo $carsList;
         ?>
     </body>
 </html>
