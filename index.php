@@ -128,7 +128,7 @@ switch($action) {
             $message = '<p class="notify">Sorry, no cars were returned.</p>';
         }
 
-        header('location: views/project1.php');
+        include 'view/project1.php';
         break;
     }
 ?>
