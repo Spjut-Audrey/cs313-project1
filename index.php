@@ -47,7 +47,7 @@ switch($action) {
         // exit;
 
         //make sure outcome worked
-        if($carOutcome === 1) {
+        if($carOutcome == 1) {
             $message = "Thanks for adding your car!";
             header('Location: index.php');
             exit;
