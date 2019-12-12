@@ -33,7 +33,7 @@ function deleteCar($cars_id) {
     $stmt->bindValue(':cars_id', $cars_id, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
-    $stmt->closeCursor();
+    // $stmt->closeCursor();
     
     return $rowsChanged;
    }
