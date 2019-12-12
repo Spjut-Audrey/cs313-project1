@@ -49,7 +49,7 @@ switch($action) {
         //make sure outcome worked
         if($carOutcome == 1) {
             $message = "Thanks for adding your car!";
-            header('Location: index.php?action=buildTable');
+            header('Location: index.php');
             exit;
         } else {
             $message = "<p>Sorry adding car failed. Please try again</p>";
@@ -75,7 +75,7 @@ switch($action) {
             exit;
         }
     break; 
-    case 'buildTable':  
+    default:  
         // get car info for displaying to user   
         $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_STRING);
         $cars = getCarInfo($cars_id);
@@ -127,7 +127,5 @@ switch($action) {
 
         header('location: views/project1.php');
         break;
-        default:
-    break;
     }
 ?>
