@@ -14,10 +14,11 @@ function regCar($cars_make, $cars_miles) {
     }
 
 // make request to db to for car info
-function getCarInfo($cars_miles) {
+function getCarInfo($cars_id) {
     $db = getDB();
-        $sql = 'SELECT cars_make, cars_id FROM cars WHERE $cars_miles = :cars_miles';
+        $sql = 'SELECT cars_make, cars_miles FROM cars WHERE $cars_id = :cars_id';
         $stmt = $db->prepare($sql);
+        $stmt ->bindValue(':cars_id', $cars_id = PDO::PARAM_INT);
         $stmt->execute();
         $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
         // $stmt->closeCursor();
