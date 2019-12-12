@@ -49,7 +49,7 @@ switch($action) {
         //make sure outcome worked
         if($carOutcome == 1) {
             $message = "Thanks for adding your car!";
-            header('Location: index.php?action=buildTable');
+            header("Location: index.php?action=buildTable&cars_miles=$cars_miles");
             exit;
         } else {
             $message = "<p>Sorry adding car failed. Please try again</p>";
