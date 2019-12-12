@@ -23,6 +23,8 @@ function getCarInfo() {
     $stmt->closeCursor();
 
     return $cars;
+}
+
 // delete car based on id
 function deleteProduct($cars_id) {
     $db = getDB();
