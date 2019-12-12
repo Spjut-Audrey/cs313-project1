@@ -127,5 +127,7 @@ switch($action) {
 
         header('location: views/project1.php');
         break;
+        default:
+    break;
     }
 ?>
