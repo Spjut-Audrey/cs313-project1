@@ -65,6 +65,8 @@ switch($action) {
         echo $cars_make;
         echo $cars_id;
 
+        exit;
+
         $deleteResult = deleteCar($cars_id);
         
         if ($deleteResult) {
