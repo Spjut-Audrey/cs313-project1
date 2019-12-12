@@ -20,7 +20,7 @@ function getCarInfo() {
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
+    // $stmt->closeCursor();
 
     return $cars;
 }
