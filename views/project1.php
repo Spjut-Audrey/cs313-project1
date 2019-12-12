@@ -20,11 +20,11 @@
         <!-- hide until "add car" button is pressed -->
         <form method="post" action="../index.php" class="hidden" id="addCarForm">
             <!-- car make -->
-            <input type="radio" name="carMake" value="chevy" id="chevy">Chevrolet<br>
-            <input type="radio" name="carMake" value="Toyota" id="Toyota">Toyota<br>
-            <input type="radio" name="carMake" value="Ford" id="Ford">Ford<br>
-            <input type="radio" name="carMake" value="Honda" id="Honda">Honda<br>
-            <input type="radio" name="carMake" value="Hyundai" id="Hyundai">Hyundai<br>
+            <input type="radio" name="carMake" value="chevy" >Chevrolet<br>
+            <input type="radio" name="carMake" value="Toyota">Toyota<br>
+            <input type="radio" name="carMake" value="Ford">Ford<br>
+            <input type="radio" name="carMake" value="Honda">Honda<br>
+            <input type="radio" name="carMake" value="Hyundai">Hyundai<br>
 
             <!-- car type/model -->
             <!-- might be too difficult without an extensive database -->
