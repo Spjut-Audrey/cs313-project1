@@ -86,7 +86,7 @@ switch($action) {
         // echo "hey";
         // exit;
 
-        print($cars);
+        print_r($cars);
 
         // check mileage against mileage table in switch probably not as db table
         // decided to use if statement because this stackoverflow said it was faster loading
