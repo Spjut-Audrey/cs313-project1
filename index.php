@@ -59,7 +59,7 @@ switch($action) {
     break;
     case 'del':
         echo $action;
-        $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
+        $cars_id = $_GET["cars_id"];
         echo $cars_id;
         
         echo $action;
