@@ -16,7 +16,7 @@ function regCar($cars_make, $cars_miles) {
 // make request to db to for car info
 function getCarInfo($cars_id) {
     $db = getDB();
-        $sql = 'SELECT cars_make, cars_miles FROM cars WHERE $cars_id = :cars_id';
+        $sql = 'SELECT cars_make cars_miles FROM cars WHERE $cars_id = :cars_id';
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
