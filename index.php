@@ -1,6 +1,7 @@
 <?php
 // connect to database 
 require_once('dbconnect.php');
+// connect to functions model
 require_once('car-model.php');
 
 session_start();
@@ -16,6 +17,8 @@ switch($action) {
         $cars_make = filter_input(INPUT_POST, 'carMake', FILTER_SANITIZE_STR);
         $cars_miles = filter_input(INPUT_POST, 'carMiles', FILTER_VALIDATE_INT);
 
+        print($cars_make);
+        print($cars_miles);
 
         // Run basic checks, return if errors
         if (empty($cars_make) || empty($cars_miles)) {
