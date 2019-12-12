@@ -60,6 +60,7 @@ switch($action) {
     case 'del':
 
         $cars_make = $_POST['carMake'];
+        echo $cars_make;
         $cars_id = filter_input(INPUT_POST, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
         
         echo $cars_make;
