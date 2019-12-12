@@ -8,6 +8,8 @@
     border-radius: 10px;
     border: none;
     padding: 5px 5px 5px 5px;
+    margin: 0 auto;
+    display: block;
 }
 
 button {
@@ -16,10 +18,13 @@ button {
     border-radius: 10px;
     border: none;
     padding: 5px 5px 5px 5px;
+    margin: 0 auto;
+    display: block;
 }
 
 #form {
     margin: 0 auto;
+    display: block;
 }
 
 h1 {
