@@ -86,7 +86,7 @@ switch($action) {
         // echo "hey";
         // exit;
 
-        print_r($cars);
+        // print_r($cars);
 
 
         
