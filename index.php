@@ -93,15 +93,15 @@ switch($action) {
             $mileRecommend = 'Change Oil';
         } else if ($cars['cars_miles'] <= 30000) {
             $mileRecommend = 'Get Tune Up Service';
-        } else if ($cars[cars_miles] <= 50000) {
+        } else if ($cars['cars_miles'] <= 50000) {
             $mileRecommend = 'Check Shocks & Struts';
-        } else if ($cars[cars_miles] <= 60000) {
+        } else if ($cars['cars_miles'] <= 60000) {
             $mileRecommend = 'Replace Timing Belts';
-        } else if ($cars[cars_miles] <= 70000) {
+        } else if ($cars['cars_miles'] <= 70000) {
             $mileRecommend = 'Check Pumps';
-        } else if ($cars[cars_miles] <= 80000) {
+        } else if ($cars['cars_miles'] <= 80000) {
             $mileRecommend = 'Replace Battery';
-        } else if ($cars[cars_miles] <= 90000) {
+        } else if ($cars['cars_miles'] <= 90000) {
             $mileRecommend = 'Get Tune Up Service';
         } else {
             $mileRecommend = 'Get Transmission & Engine Evaluation';
