@@ -78,7 +78,8 @@ switch($action) {
     case 'buildTable':  
         print($action);
         // // get car info for displaying to user   
-        // $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_STRING);
+        $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_STRING);
+        print($action);
         $cars = getCarInfo($cars_id);
 
         echo "hey";
