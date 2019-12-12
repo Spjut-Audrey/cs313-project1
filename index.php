@@ -14,17 +14,17 @@ $action = filter_input(INPUT_POST, 'action');
 switch($action) {
     case 'addCar':
         // add car to cars table
-        $cars_make = filter_input(INPUT_POST, 'carMake', FILTER_SANITIZE_STR);
+        $cars_make = $_POST['carMake'];
         $cars_miles = filter_input(INPUT_POST, 'carMiles', FILTER_VALIDATE_INT);
 
-        echo $_POST['carMake'];
+        // echo $_POST['carMake'];
 
-        echo $action;
-        echo $cars_make;
-        print($cars_make);
-        print($cars_miles);
+        // echo $action;
+        // echo $cars_make;
+        // print($cars_make);
+        // print($cars_miles);
 
-        exit;
+        // exit;
 
         // Run basic checks, return if errors
         if (empty($cars_make) || empty($cars_miles)) {

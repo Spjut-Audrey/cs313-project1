@@ -20,7 +20,7 @@
         <!-- hide until "add car" button is pressed -->
         <form method="post" action="../index.php" class="hidden" id="addCarForm">
             <!-- car make -->
-            <input type="radio" name="carMake" value="chevy" >Chevrolet<br>
+            <input type="radio" name="carMake" value="Chevrolet" >Chevrolet<br>
             <input type="radio" name="carMake" value="Toyota">Toyota<br>
             <input type="radio" name="carMake" value="Ford">Ford<br>
             <input type="radio" name="carMake" value="Honda">Honda<br>
