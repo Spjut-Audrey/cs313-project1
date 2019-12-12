@@ -11,7 +11,7 @@ $action = filter_input(INPUT_POST, 'action');
         $action = filter_input(INPUT_GET, 'action');
     }
 
-echo $action;
+// echo $action;
 
 switch($action) {
     case 'addCar':
@@ -76,14 +76,14 @@ switch($action) {
         }
     break; 
     case 'buildTable':  
-        print($action);
+        // print($action);
         // // get car info for displaying to user   
-        print(" after filter_input");
+        // print(" after filter_input");
 
         $cars = getCarInfo();
-        print("end");
+        // print("end");
 
-        echo "hey";
+        // echo "hey";
         // exit;
 
         // check mileage against mileage table in switch probably not as db table
