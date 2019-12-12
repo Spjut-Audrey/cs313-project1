@@ -37,6 +37,14 @@ switch($action) {
         //send data to model
         $carOutcome = regCar($cars_make, $cars_miles);
 
+        echo $carOutcome;
+        echo $action;
+        echo $cars_make;
+        print($cars_make);
+        print($cars_miles);
+
+        exit;
+
         //make sure outcome worked
         if($carOutcome === 1) {
             $message = "Thanks for adding your car!";
