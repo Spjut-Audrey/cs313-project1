@@ -12,7 +12,7 @@
             $dbHost = $dbBits["host"];
             $dbPort = $dbBits["port"];
             $dbUser = $dbBits["user"];
-            $dbPassword = $dbBits["password"];
+            $dbPassword = $dbBits["pass"];
             $dbName = ltrim($dbBits["path"], '/');
 
             //create new pdo connection
