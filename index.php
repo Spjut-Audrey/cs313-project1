@@ -88,26 +88,6 @@ switch($action) {
 
         print_r($cars);
 
-        // check mileage against mileage table in switch probably not as db table
-        // decided to use if statement because this stackoverflow said it was faster loading
-        // link: https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
-        if ($cars['cars_miles'] <= 3000) {
-            $mileRecommend = 'Change Oil';
-        } else if ($cars['cars_miles'] <= 30000) {
-            $mileRecommend = 'Get Tune Up Service';
-        } else if ($cars['cars_miles'] <= 50000) {
-            $mileRecommend = 'Check Shocks & Struts';
-        } else if ($cars['cars_miles'] <= 60000) {
-            $mileRecommend = 'Replace Timing Belts';
-        } else if ($cars['cars_miles'] <= 70000) {
-            $mileRecommend = 'Check Pumps';
-        } else if ($cars['cars_miles'] <= 80000) {
-            $mileRecommend = 'Replace Battery';
-        } else if ($cars['cars_miles'] <= 90000) {
-            $mileRecommend = 'Get Tune Up Service';
-        } else {
-            $mileRecommend = 'Get Transmission & Engine Evaluation';
-        }
 
         
         // show car and recommendation in a table of sorts? here or html?
@@ -119,6 +99,28 @@ switch($action) {
             $carsList .= '<tbody>';
 
             foreach ($cars as $car) {
+                // check mileage against mileage table in switch probably not as db table
+                // decided to use if statement because this stackoverflow said it was faster loading
+                // link: https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
+                if ($car['cars_miles'] <= 3000) {
+                    $mileRecommend = 'Change Oil';
+                } else if ($car['cars_miles'] <= 30000) {
+                    $mileRecommend = 'Get Tune Up Service';
+                } else if ($car['cars_miles'] <= 50000) {
+                    $mileRecommend = 'Check Shocks & Struts';
+                } else if ($car['cars_miles'] <= 60000) {
+                    $mileRecommend = 'Replace Timing Belts';
+                } else if ($car['cars_miles'] <= 70000) {
+                    $mileRecommend = 'Check Pumps';
+                } else if ($car['cars_miles'] <= 80000) {
+                    $mileRecommend = 'Replace Battery';
+                } else if ($car['cars_miles'] <= 90000) {
+                    $mileRecommend = 'Get Tune Up Service';
+                } else {
+                    $mileRecommend = 'Get Transmission & Engine Evaluation';
+                }
+
+
                 $carsList .= "<tr><td class='carData'>$car[cars_make]</td>";
                 $carsList .= "<td>$car[cars_miles]</td>";
                 $carsList .= "<td>$mileRecommend</td>";
