@@ -124,7 +124,7 @@ switch($action) {
                 $carsList .= "<tr><td class='carData'>$car[cars_make]</td>";
                 $carsList .= "<td>$car[cars_miles]</td>";
                 $carsList .= "<td>$mileRecommend</td>";
-                $prodList .= "<td><a href='index.php?action=del&id=$car[cars_id]' title='Click to delete'>Delete</a></td></tr>";
+                $carsList .= "<td><a href='index.php?action=del&id=$car[cars_id]' title='Click to delete'>Delete</a></td></tr>";
             }
             $carsList .= '</tbody></table>';
 
