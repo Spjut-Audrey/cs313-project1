@@ -11,7 +11,7 @@
         <title>Car Maintenence Tracker</title>
 
         <!-- css -->
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="../main.css">
         <!-- js -->
         <script src="../project1.js"></script>
     </head>
