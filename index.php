@@ -80,6 +80,8 @@ switch($action) {
         $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_STRING);
         $cars = getCarInfo($cars_id);
 
+        echo "hey";
+
         // check mileage against mileage table in switch probably not as db table
         // decided to use if statement because this stackoverflow said it was faster loading
         // link: https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
