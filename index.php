@@ -11,6 +11,8 @@ $action = filter_input(INPUT_POST, 'action');
         $action = filter_input(INPUT_GET, 'action');
     }
 
+echo $action;
+
 switch($action) {
     case 'addCar':
         // add car to cars table
@@ -37,13 +39,12 @@ switch($action) {
         //send data to model
         $carOutcome = regCar($cars_make, $cars_miles);
 
-        echo $carOutcome;
-        echo $action;
-        echo $cars_make;
-        print($cars_make);
-        print($cars_miles);
+        // echo $carOutcome;
+        // echo $action;
+        // echo $cars_make;
+        // print($cars_miles);
 
-        exit;
+        // exit;
 
         //make sure outcome worked
         if($carOutcome === 1) {
