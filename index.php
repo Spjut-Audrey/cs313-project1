@@ -59,11 +59,10 @@ switch($action) {
     break;
     case 'del':
         echo $action;
-        $cars_id = filter_input(INPUT_POST, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
+        $cars_id = filter_input(INPUT_GET, 'cars_id', FILTER_SANITIZE_NUMBER_INT);
         echo $cars_id;
         
-        echo $cars_make;
-        echo $cars_id;
+        echo $action;
 
         exit;
 
