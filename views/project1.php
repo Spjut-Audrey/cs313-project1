@@ -37,7 +37,7 @@
                 <!-- <input type="text" name="carModel" value="Please Enter Car Model" id="carModel"><br> -->
 
                 <!-- car miles -->
-                <input type="number" name="carMiles" id="carMiles"><br>
+                Current Car Mileage:<input type="number" name="carMiles" id="carMiles"><br>
 
                 <input type="submit" value="Submit" class="button">
                 <input type="hidden" name="action" value="addCar">
