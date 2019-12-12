@@ -18,7 +18,7 @@
     <body>
         <button onclick="showForm()">Add Car</button>
         <!-- hide until "add car" button is pressed -->
-        <form method="POST" action="../index.php" class="hidden" id="addCarForm">
+        <form method="POST" action="../project1/" class="hidden" id="addCarForm">
             <!-- car make -->
             <input type="radio" name="carMake" value="chevy" id="chevy">Chevrolet<br>
             <input type="radio" name="carMake" value="Toyota" id="Toyota">Toyota<br>
