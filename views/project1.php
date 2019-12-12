@@ -43,7 +43,9 @@
         <?php
             if (isset($message)) {
                 echo $message;
-            } if (isset($carsList)) {
+            }; 
+            
+            if (isset($carsList)) {
                 echo $carsList;
              }
         ?>
