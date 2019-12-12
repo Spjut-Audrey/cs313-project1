@@ -19,7 +19,7 @@ function getCarInfo() {
     $sql = 'SELECT cars_make, cars_miles, cars_id FROM cars ORDER BY cars_id ASC';
     $stmt = $db->prepare($sql);
     $stmt->execute();
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // $stmt->closeCursor();
 
     return $cars;

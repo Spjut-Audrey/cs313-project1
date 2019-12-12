@@ -109,6 +109,7 @@ switch($action) {
 
         
         // show car and recommendation in a table of sorts? here or html?
+        if(count($cars) > 0) {
             $carsList = '<table class="carsTable">';
             $carsList .= '<thead>';
             $carsList .= '<tr><th>Car Make</th><th>Car Miles</th><th>Recommended Maintenence</th></tr>';
@@ -123,9 +124,9 @@ switch($action) {
             }
             $carsList .= '</tbody></table>';
 
-        // } else {
-        //     $message = '<p class="notify">Sorry, no cars were returned.</p>';
-        // }
+        } else {
+            $message = '<p class="notify">Sorry, no cars were returned.</p>';
+        }
 
         include 'views/project1.php';
         break;
