@@ -5,12 +5,12 @@
 .button {
     color: white;
     background-color: #303030;
-    border-radius: 15px;
+    border-radius: 10%;
     border: none;
     padding: 5px 5px 5px 5px;
 }
 
-form {
+#form {
     margin: 0 auto;
 }
 

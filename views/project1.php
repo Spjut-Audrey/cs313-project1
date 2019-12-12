@@ -16,27 +16,31 @@
         <script src="../project1.js"></script>
     </head>
     <body>
-        <button onclick="showForm()">Add Car</button>
-        <!-- hide until "add car" button is pressed -->
-        <form method="post" action="../index.php" class="hidden" id="addCarForm">
-            <!-- car make -->
-            <input type="radio" name="carMake" value="Chevrolet" >Chevrolet<br>
-            <input type="radio" name="carMake" value="Toyota">Toyota<br>
-            <input type="radio" name="carMake" value="Ford">Ford<br>
-            <input type="radio" name="carMake" value="Honda">Honda<br>
-            <input type="radio" name="carMake" value="Hyundai">Hyundai<br>
+        <div id="form">
+            <h1>Car Maintenence Tracker</h1>
+            
+            <button onclick="showForm()">Add Car</button>
+            <!-- hide until "add car" button is pressed -->
+            <form method="post" action="../index.php" class="hidden" id="addCarForm">
+                <!-- car make -->
+                <input type="radio" name="carMake" value="Chevrolet" >Chevrolet<br>
+                <input type="radio" name="carMake" value="Toyota">Toyota<br>
+                <input type="radio" name="carMake" value="Ford">Ford<br>
+                <input type="radio" name="carMake" value="Honda">Honda<br>
+                <input type="radio" name="carMake" value="Hyundai">Hyundai<br>
 
-            <!-- car type/model -->
-            <!-- might be too difficult without an extensive database -->
-            <!-- <input type="text" name="carModel" value="Please Enter Car Model" id="carModel"><br> -->
+                <!-- car type/model -->
+                <!-- might be too difficult without an extensive database -->
+                <!-- <input type="text" name="carModel" value="Please Enter Car Model" id="carModel"><br> -->
 
-            <!-- car miles -->
-            <input type="number" name="carMiles" id="carMiles"><br>
+                <!-- car miles -->
+                <input type="number" name="carMiles" id="carMiles"><br>
 
-            <input type="submit" value="Submit" class="button">
-            <input type="hidden" name="action" value="addCar">
+                <input type="submit" value="Submit" class="button">
+                <input type="hidden" name="action" value="addCar">
 
-        </form>
+            </form>
+        </div>
 
         <!-- show current cars if added don't show if nothing there(check added with php)
         message shows instead-->
