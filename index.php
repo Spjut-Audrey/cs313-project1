@@ -78,7 +78,7 @@ switch($action) {
     case 'buildTable':  
         print($action);
         // // get car info for displaying to user   
-        $cars_id = $_GET('cars_id');
+        $cars_id = $_GET['cars_id'];
         print(" after filter_input");
 
         $cars = getCarInfo($cars_id);
