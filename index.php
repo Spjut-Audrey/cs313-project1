@@ -49,7 +49,7 @@ switch($action) {
         //make sure outcome worked
         if($carOutcome == 1) {
             $message = "Thanks for adding your car!";
-            header('Location: index.php');
+            header('Location: index.php?action=buildTable');
             exit;
         } else {
             $message = "<p>Sorry adding car failed. Please try again</p>";
@@ -75,7 +75,7 @@ switch($action) {
             exit;
         }
     break; 
-    default:  
+    case 'buildTable':  
         // get car info for displaying to user   
         $cars = getCarInfo();
 
@@ -121,6 +121,6 @@ switch($action) {
             $message = '<p class="notify">Sorry, no cars were returned.</p>';
         }
 
-        header('location: project1.php');
+        header('location: views/project1.php');
     }
 ?>
