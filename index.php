@@ -59,7 +59,7 @@ switch($action) {
     break;
     case 'del':
         echo $action;
-        $cars_id = $_GET["cars_id"];
+        $cars_id = $_GET["id"];
         echo $cars_id;
         
         echo $action;
