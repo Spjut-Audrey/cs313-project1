@@ -89,9 +89,9 @@ switch($action) {
         // check mileage against mileage table in switch probably not as db table
         // decided to use if statement because this stackoverflow said it was faster loading
         // link: https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
-        if ($cars[cars_miles] <= 3000) {
+        if ($cars['cars_miles'] <= 3000) {
             $mileRecommend = 'Change Oil';
-        } else if ($cars[cars_miles] <= 30000) {
+        } else if ($cars['cars_miles'] <= 30000) {
             $mileRecommend = 'Get Tune Up Service';
         } else if ($cars[cars_miles] <= 50000) {
             $mileRecommend = 'Check Shocks & Struts';
@@ -109,7 +109,6 @@ switch($action) {
 
         
         // show car and recommendation in a table of sorts? here or html?
-        if (count($cars) > 0) {
             $carsList = '<table class="carsTable">';
             $carsList .= '<thead>';
             $carsList .= '<tr><th>Car Make</th><th>Car Miles</th><th>Recommended Maintenence</th></tr>';
@@ -124,11 +123,11 @@ switch($action) {
             }
             $carsList .= '</tbody></table>';
 
-        } else {
-            $message = '<p class="notify">Sorry, no cars were returned.</p>';
-        }
+        // } else {
+        //     $message = '<p class="notify">Sorry, no cars were returned.</p>';
+        // }
 
-        include 'view/project1.php';
+        include 'views/project1.php';
         break;
     }
 ?>
