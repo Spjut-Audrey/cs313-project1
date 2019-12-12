@@ -38,6 +38,7 @@ form {
 body {
     margin: 0 auto;
     display: block;
+    text-align: center;
 }
 
 h1 {
