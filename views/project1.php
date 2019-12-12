@@ -44,7 +44,7 @@
 
             </form>
         </div>
-
+       <br><br>
         <!-- show current cars if added don't show if nothing there(check added with php)
         message shows instead-->
         <?php

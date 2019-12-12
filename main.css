@@ -27,6 +27,11 @@ button {
     display: block;
 }
 
+form {
+    margin: 0 auto;
+    display: block;
+}
+
 h1 {
     text-align: center;
 }
