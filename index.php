@@ -81,6 +81,7 @@ switch($action) {
         $cars = getCarInfo($cars_id);
 
         echo "hey";
+        exit;
 
         // check mileage against mileage table in switch probably not as db table
         // decided to use if statement because this stackoverflow said it was faster loading
